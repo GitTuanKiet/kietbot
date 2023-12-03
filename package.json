@@ -1,0 +1,32 @@
+{
+  "name": "kietbot",
+  "version": "1.0.0",
+  "description": "kietbot FacebookChatgpt",
+  "main": "index.js",
+  "type":"module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "noded tests/**/*.test.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GitTuanKiet/kietbot.git"
+  },
+  "keywords": [
+    "chatbot",
+    "chatgpt"
+  ],
+  "author": "TuanKiet",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.2",
+    "node-fetch": "^3.3.2"
+  }
+}
