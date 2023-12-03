@@ -1,6 +1,6 @@
 // services/openaiService.js
 import fetch from 'node-fetch';
-import config from '../config.js';
+import config from '../../config/config.js';
 
 const openai = async (rule, text) => {
   try {

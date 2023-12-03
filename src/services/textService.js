@@ -1,10 +1,10 @@
 // services/textMessageService.js
-import config from '../config.js';
+import config from '../../config/config.js';
 import { getUserCache, setUserCache } from './cacheService.js';
 import { sendFacebookMessage } from './facebookService.js';
 import { openai } from './openaiService.js';
 
-const sendTextMessage = async (userId, text) => {
+const textMessage = async (userId, text) => {
   try {
     const checkedTextMessage = await openai(config.text.rule, text);
     const cachedResult = await getUserCache(checkedTextMessage, text);
@@ -32,4 +32,4 @@ const sendTextMessage = async (userId, text) => {
   }
 };
 
-export { sendTextMessage };
+export default textMessage ;

@@ -1,5 +1,5 @@
 // controllers/processMessageController.js
-import textService from '../services/textService.js';
+import textMessage from '../services/textService.js';
 
 const processMessageController = async (event) => {
   try {
@@ -9,7 +9,7 @@ const processMessageController = async (event) => {
     console.log('User ID:', userId);
     console.log('Received Message:', message);
 
-    await textService(userId, message);
+    await textMessage(userId, message);
   } catch (err) {
     console.error('Error:', err);
   }

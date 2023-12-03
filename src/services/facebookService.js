@@ -1,6 +1,6 @@
 // facebookService.js
 import fetch from 'node-fetch';
-import config from '../config.js';
+import config from '../../config/config.js';
 
 const sendFacebookMessage = async (userId, text) => {
   try {

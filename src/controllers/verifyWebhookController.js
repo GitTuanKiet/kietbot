@@ -1,5 +1,5 @@
 // controllers/verifyWebhookController.js
-import config from '../config.js';
+import config from '../../config/config.js';
 
 const verifyWebhookController = (req, res) => {
   const VERIFY_TOKEN = config.app.verifyToken; // Add config.verifyToken to config.js if needed
