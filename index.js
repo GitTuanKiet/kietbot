@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Use the webhook routes
-app.use('/webhook', webhookRoutes);
+app.use('/', webhookRoutes);
 
 app.listen(config.app.port, () => {
   console.log(`Express server is listening on port ${config.app.port}`);

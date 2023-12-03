@@ -18,9 +18,8 @@ export default {
     mongouri:process.env.MONGO_URI || 'your_mongo_uri',
 },
   text:{
-    rule:"Phân loại ngữ cảnh(Chào hỏi,Tạm biệt,Cảm xúc vui,Cảm xúc buồn,Lời khen,Chê bai,xác nhận,phủ định)."+
-    "Chỉ trả lời 1 trong những từ ngữ trong dấu () nếu không phân biệt được thì là Không",
-    content:"Bạn là TKBot,chỉ sử dụng Tiếng Việt.",
+    rule:process.env.RULE || '',
+    content:process.env.CONTENT || '',
   },
 
 };
