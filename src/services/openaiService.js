@@ -1,8 +1,7 @@
-// services/openaiService.js
 import fetch from 'node-fetch';
 import config from '../../config/config.js';
 
-const openai = async (rule, text) => {
+const openai = async (content, text) => {
   try {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -13,7 +12,7 @@ const openai = async (rule, text) => {
       headers: headers,
       body: JSON.stringify({
         messages: [
-          { role: "system", content: rule },
+          { role: "system", content: content },
           { role: "user", content: text },
         ],
         model: "gpt-3.5-turbo",

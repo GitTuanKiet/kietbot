@@ -1,4 +1,3 @@
-// test/unit/processMessageController.test.js
 import { expect } from 'chai';
 import { processMessageController } from '../../src/controllers/processMessageController.js';
 import { textMessage } from '../../src/services/textService.js';

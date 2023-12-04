@@ -1,4 +1,3 @@
-// test/unit/messageWebhookController.test.js
 import { expect } from 'chai';
 import { messageWebhookController } from '../../src/controllers/messageWebhookController.js';
 

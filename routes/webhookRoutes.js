@@ -1,4 +1,3 @@
-// webhookRoutes.js
 import express from 'express';
 import verifyWebhookController from '../src/controllers/verifyWebhookController.js';
 import messageWebhookController from '../src/controllers/messageWebhookController.js';

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "kietbot FacebookChatgpt",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "directories": {
     "test": "tests"
   },
@@ -25,6 +25,7 @@
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "langdetect": "^0.2.1",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.2",
     "node-fetch": "^3.3.2"

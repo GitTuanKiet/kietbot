@@ -1,4 +1,3 @@
-// config.js
 import dotenv from 'dotenv';
 dotenv.config({ path: '.env' });
 
@@ -18,8 +17,8 @@ export default {
     mongouri:process.env.MONGO_URI || 'your_mongo_uri',
 },
   text:{
-    rule:process.env.RULE || '',
-    content:process.env.CONTENT || '',
+    rule:process.env.RULE || 'Bạn là ChatBot .',
+    content:process.env.CONTENT || 'Bạn là ChatBot .',
   },
 
 };

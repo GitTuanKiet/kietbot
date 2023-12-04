@@ -1,4 +1,3 @@
-// test/unit/verifyWebhookController.test.js
 import { expect } from 'chai';
 import { verifyWebhookController } from '../../src/controllers/verifyWebhookController.js';
 

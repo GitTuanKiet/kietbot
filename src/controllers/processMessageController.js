@@ -1,4 +1,3 @@
-// controllers/processMessageController.js
 import textMessage from '../services/textService.js';
 
 const processMessageController = async (event) => {

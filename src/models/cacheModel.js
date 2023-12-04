@@ -1,9 +1,8 @@
-// models/cacheModel.js
 import mongoose from 'mongoose';
 
 const cacheSchema = new mongoose.Schema({
-  prompt: String,
-  results: [
+  userId:String,
+  prompt:[
     {
       text: String,
       result: String,

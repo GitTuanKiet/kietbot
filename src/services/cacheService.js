@@ -1,17 +1,11 @@
-// cacheService.js
 import CacheModel from '../models/cacheModel.js';
 
-const getUserCache = async (prompt, text) => {
+const getUserCache = async (text) => {
   try {
-    const cache = await CacheModel.findOne({
-      prompt: prompt,
-      'results.text': text,
-    }).exec();
-
-    if (cache && cache.results.length > 0) {
-      const randomIndex = Math.floor(Math.random() * cache.results.length);
-      const randomResult = cache.results[randomIndex].result;
-      return randomResult;
+    const cache = await CacheModel.findOne({'prompt.text': text}).exec();
+    if (cache && cache.prompt.length > 0) {
+      const matchingPrompt = cache.prompt.find(prompt => prompt.text === text);
+      return matchingPrompt.result;
     } else {
       return null;
     }
@@ -21,20 +15,18 @@ const getUserCache = async (prompt, text) => {
   }
 };
 
-const setUserCache = async (prompt, text, result) => {
+const setUserCache = async (userId, text, result) => {
   try {
-    const existingCache = await CacheModel.findOne({
-      prompt: prompt,
-    }).exec();
+    const existingCache = await CacheModel.findOne({userId: userId}).exec();
 
     if (existingCache) {
-      existingCache.results.push({ text, result });
+      existingCache.prompt.push({ text, result });
       await existingCache.save();
       console.log('Updated result in the database');
     } else {
       const newCache = new CacheModel({
-        prompt: prompt,
-        results: { text, result },
+        userId: userId,
+        prompt: { text, result },
       });
       await newCache.save();
       console.log('Saved result to the database');
@@ -43,5 +35,4 @@ const setUserCache = async (prompt, text, result) => {
     console.error('Error checking and saving cache:', error);
   }
 };
-
 export { getUserCache, setUserCache };

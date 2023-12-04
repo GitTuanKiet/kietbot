@@ -1,4 +1,3 @@
-// facebookService.js
 import fetch from 'node-fetch';
 import config from '../../config/config.js';
 

@@ -1,4 +1,3 @@
-// controllers/messageWebhookController.js
 import processMessageController from './processMessageController.js';
 
 const messageWebhookController = async (req, res) => {
